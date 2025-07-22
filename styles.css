@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background:rgb(229, 223, 224) ;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: rgb(17, 6, 6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed; /* Makes navbar stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-list{
+        display: none;
+    }
+
+
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.hype{
+    width: 100%;
+    /*height: 400px;*/
+    height: auto;
+    background: url(images/background.jpeg); /*PUT THE IMAGE DARK (FONT IS WHITE) */
+    background-repeat: no-repeat; /*stop repetition*/
+    background-size: cover;  /*covers the entire screen*/
+    background-position: center; /*centers the position of background image*/
+    color:#fff; /*text colour on the image*/
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+
+.hype h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hype p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}           
+
+.search-box{
+    max-width: 550px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background: cyan; */
+}
+
+.search-box input{
+    width: 70%;
+    padding: 10px;
+    outline: none; /*removes box outline*/
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    border: 1px solid rgb(201, 147, 156)  /* rgb(201, 147, 156) */;
+}
+
+.search-box button{
+    padding: 10px 20px;
+    outline: none; /*removes box outline*/
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1rem;
+    background: rgb(201, 147, 156);
+    color:#fff;
+    cursor: pointer;
+
+}
+
+/*  ------------------------- DISHES ------------------------------*/
+
+.dish{
+    padding: 50px 0;
+}
+
+.dish h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: rgb(27, 1, 1);
+}
+
+.dish-section{
+    width: 90%;
+    margin: 0 auto;
+    display: grid; /*makes it responsive*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*provides zooming features */
+    column-gap: 10px;
+}
+
+.dish-card{
+    background: white;
+    margin: 30px 10px;
+    border-radius: 8px;
+    border: 1px solid lavenderblush;
+    overflow: hidden; /*hides the content added outside the card*/
+    box-shadow: 0 4px 8px black; /*might have to change the configuration of colour */
+}
+
+.dish-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px; /* to make the corners round */
+    border-top-right-radius: 10px;
+}
+
+.dish-card h2{
+    font-size: 22px;
+    padding: 20px;
+}
+
+.dish-card p{
+    font-size: 18px;
+    padding: 20px;
+}
+
+.dish-card a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: rgb(201, 147, 156);  /* rgba(139, 0, 0, 0.944) */
+    color: whitesmoke;  /*whitesmoke */
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+/* ---------------------------- FOOTER -------------------------------- */
+footer{
+    background: rgb(201, 147, 156);
+    padding: 20px 0; /*upper is 20; left,right=0 */
+    color: whitesmoke; /* whitesmoke */
+    text-align: center;
+}
+
+.menu-icon{
+    font-size: 24px;
+    padding: 20px;
+    text-align: right;
+    cursor : pointer;
+    display: block;
+}
+
+
+@media only screen and (min-width: 768px){
+    .menu-icon{
+        display: none;
+        /*to hide the menu icon on laptop, beacuse it has enough screen space to show the actual menu*/
+    }
+
+    .nav-list{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .hype h2{
+        font-size: 28px;
+    }
+    .hype p{
+        font-size: 15px;
+    }
+}
